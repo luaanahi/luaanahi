@@ -1,0 +1,40 @@
+-- criando meu primeiro banco de dados
+CREATE DATABASE sementebio; -- boa prática: letra maiucula para o comando/função e minuscula para nome do comando/função 
+
+-- criando minha primeira tabela/entidade
+CREATE TABLE alunos (
+	matricula INTEGER PRIMARY KEY, -- primeiro o nome do atributo, depois o "comando", o que quero que o SQL faça
+    nome_aluno TEXT NOT NULL, -- integer é o int do python (número inteiro), text é o string do python (letras)
+    genero TEXT NOT NULL
+    );
+    
+-- criando a tabela 'professores' para dar continuidade no exercício
+CREATE TABLE professores (
+	id_prof INTEGER PRIMARY KEY,
+    disciplina TEXT NOT NULL,
+    turno TEXT NOT NULL
+    );
+    
+-- craindo a tabela 'disciplina'
+CREATE TABLE unidade (
+	id_unidade INTEGER PRIMARY KEY,
+    endereco TEXT NOT NULL,
+    bairro TEXT NOT NULL,
+    telefone TEXT NOT NULL,
+    diretora TEXT NOT NULL,
+    cidade TEXT NOT NULL
+    
+    
+-- injeção de dados-teste tabela 'alunos'
+INSERT INTO alunos VALUES (1, 'Lua', 'F'); -- coloco os atributos na ordem que eu mesma criei anteriormente quando criei as tabelas
+INSERT INTO alunos VALUES (2, 'Joana', 'F');
+
+-- injeção de dados-teste tabela 'professores'
+INSERT INTO professores VALUES (22, 'matemática', 'manhã');
+INSERT INTO professores VALUES (18, 'música', 'tarde');
+INSERT INTO professores VALUES (13, 'educação física', 'tarde');
+
+-- consultando as injeções realizadas
+SELECT * FROM alunos WHERE matricula=1 -- no select não precisa colocar ; no final
+-- o asterisco é para procurar a informação que eu quero na tabela inteira
+-- procurar na tabela inteira, considerando que quanto maior a tabela, maior o tempo de processamento da informação
