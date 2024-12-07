@@ -14,7 +14,7 @@ CREATE TABLE alunos (
     
 -- criando a tabela 'professores' para dar continuidade no exercício
 CREATE TABLE professores (
-	id_prof INTEGER PRIMARY KEY,
+    id_prof INTEGER PRIMARY KEY,
     nome_prof TEXT NOT NULL,
     disciplina TEXT NOT NULL,
     turno TEXT NOT NULL,
@@ -25,7 +25,7 @@ CREATE TABLE professores (
     
 -- criando a tabela 'unidade'
 CREATE TABLE unidade (
-	id_unidade INTEGER PRIMARY KEY,
+    id_unidade INTEGER PRIMARY KEY,
     endereco TEXT NOT NULL,
     bairro TEXT NOT NULL,
     telefone TEXT NOT NULL,
